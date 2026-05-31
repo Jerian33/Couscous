@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c6dbljji33l8"]
+
+[ext_resource type="Texture2D" uid="uid://g5s1ms8fl5ha" path="res://assets/sprites/Strawberry.png" id="1_13m7n"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qrwac"]
+radius = 9.0
+height = 26.0
+
+[node name="Strawberry" type="Area2D" unique_id=1761410426]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1168332907]
+shape = SubResource("CapsuleShape2D_qrwac")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1468441278]
+texture = ExtResource("1_13m7n")

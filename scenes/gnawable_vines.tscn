@@ -1,0 +1,126 @@
+[gd_scene format=3 uid="uid://ctkj8hctrb61k"]
+
+[ext_resource type="Script" uid="uid://1x8ku4hofcyp" path="res://scripts/gnawable_vines.gd" id="1_8rfkf"]
+[ext_resource type="Texture2D" uid="uid://dw8htavjglkm0" path="res://assets/sprites/PlaceholderVines.png" id="1_msvb2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8rfkf"]
+size = Vector2(55, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8rfkf"]
+atlas = ExtResource("1_msvb2")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pyipv"]
+atlas = ExtResource("1_msvb2")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0uxee"]
+atlas = ExtResource("1_msvb2")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lysxa"]
+atlas = ExtResource("1_msvb2")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7l0mw"]
+atlas = ExtResource("1_msvb2")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7fcli"]
+atlas = ExtResource("1_msvb2")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3tegd"]
+atlas = ExtResource("1_msvb2")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m8gsq"]
+atlas = ExtResource("1_msvb2")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bit43"]
+atlas = ExtResource("1_msvb2")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_stqyg"]
+atlas = ExtResource("1_msvb2")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hj2qv"]
+atlas = ExtResource("1_msvb2")
+region = Rect2(640, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rsw8x"]
+atlas = ExtResource("1_msvb2")
+region = Rect2(704, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lysxa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8rfkf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pyipv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0uxee")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lysxa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7l0mw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7fcli")
+}],
+"loop": true,
+"name": &"from_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3tegd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m8gsq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bit43")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_stqyg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hj2qv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rsw8x")
+}],
+"loop": true,
+"name": &"from_right",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7l0mw"]
+size = Vector2(89, 41)
+
+[node name="GnawableVines" type="StaticBody2D" unique_id=643379475]
+script = ExtResource("1_8rfkf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1850261122]
+position = Vector2(0.5, 2)
+shape = SubResource("RectangleShape2D_8rfkf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2094340376]
+sprite_frames = SubResource("SpriteFrames_lysxa")
+animation = &"from_right"
+
+[node name="InteractZone" type="Area2D" parent="." unique_id=1049512922]
+collision_layer = 3
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractZone" unique_id=1185889126]
+position = Vector2(0.5, 10.5)
+shape = SubResource("RectangleShape2D_7l0mw")

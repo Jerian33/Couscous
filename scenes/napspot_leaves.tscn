@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c4d855aklxsfw"]
+
+[ext_resource type="Texture2D" uid="uid://dcwk4hrfqwod8" path="res://assets/sprites/NapSpot_Leaves.png" id="1_fatvl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_abvba"]
+size = Vector2(20, 10)
+
+[node name="NapSpot_Leaves" type="Area2D" unique_id=947150933]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=61701262]
+position = Vector2(0, -5)
+shape = SubResource("RectangleShape2D_abvba")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1779944921]
+texture = ExtResource("1_fatvl")
