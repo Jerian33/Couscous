@@ -1,0 +1,96 @@
+[gd_scene format=4 uid="uid://cjjhfsmonxvh8"]
+
+[ext_resource type="Script" uid="uid://dw2mssjninvx6" path="res://scripts/flight_test.gd" id="1_cgkto"]
+[ext_resource type="PackedScene" uid="uid://bw716yigf5b4l" path="res://couscous.tscn" id="1_xnmnc"]
+[ext_resource type="Texture2D" uid="uid://qi6a6kaj0nob" path="res://assets/tiles/GrassTileset.png" id="2_cgkto"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rliek"]
+texture = ExtResource("2_cgkto")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+6:0/0 = 0
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 0, 0, 16, 16, -16, 16)
+7:0/0 = 0
+7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, 0, 16, -16, 16, 16, -16, 16)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+5:1/0 = 0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+6:1/0 = 0
+6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+7:1/0 = 0
+7:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+4:2/0 = 0
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, 0, 16, 16, -16, 16)
+5:2/0 = 0
+5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 0, 16, 16, -16, 16)
+6:2/0 = 0
+6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(16, 0, 16, 16, -16, 16)
+7:2/0 = 0
+7:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 0, 16, -16, 16, 16, -16, 16)
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+4:3/0 = 0
+4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+5:3/0 = 0
+5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+6:3/0 = 0
+6:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+7:3/0 = 0
+7:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSet" id="TileSet_mlklb"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_rliek")
+
+[node name="FlightTest" type="Node2D" unique_id=720314514]
+script = ExtResource("1_cgkto")
+
+[node name="Couscous" parent="." unique_id=794286287 instance=ExtResource("1_xnmnc")]
+
+[node name="MainTileMap" type="TileMapLayer" parent="." unique_id=406447732]
+use_parent_material = true
+position = Vector2(1, 0)
+tile_map_data = PackedByteArray("AAD+/wEAAAAAAAAAAAD//wEAAAABAAAAAAAAAAEAAAABAAAAAAABAAEAAAACAAAAAAAEAAEAAAAAAAAAAAAFAAEAAAABAAAAAAAGAAAAAAAHAAAAAAAGAAEAAAAHAAEAAAAHAAAAAAABAAAAAAAIAP//AAAGAAIAAAAIAAAAAAAGAAMAAAAHAAEAAAAEAAMAAAAIAAEAAAAEAAMAAAAJAAEAAAAEAAMAAAABAAIAAAACAAIAAAD+/wIAAAAAAAIAAAD//wIAAAABAAIAAAAAAAIAAAABAAIAAAAEAAIAAAAAAAIAAAAFAAIAAAABAAIAAAAGAAIAAAABAAIAAAAHAAIAAAABAAIAAAAIAAIAAAABAAIAAAAJAAIAAAABAAIAAAAFAP7/AAACAAMAAAAEAP7/AAAAAAMAAAAAAPz/AAAAAAMAAAABAPz/AAABAAMAAAACAPz/AAACAAMAAAAKAAIAAAABAAIAAAAMAP//AAABAAAAAAAPAAIAAAABAAIAAAAQAAIAAAABAAIAAAARAAIAAAABAAIAAAASAAIAAAABAAIAAAATAAIAAAABAAIAAAAUAAIAAAABAAIAAAAVAAIAAAABAAIAAAASAAEAAAAFAAMAAAATAAEAAAABAAAAAAAUAAEAAAABAAAAAAAVAAEAAAABAAAAAAAWAAAAAAAHAAAAAAAXAP//AAAAAAEAAAAXAAAAAAAFAAEAAAAWAAEAAAAHAAEAAAAWAAIAAAABAAIAAAAXAAIAAAABAAIAAAAXAAEAAAABAAEAAAAZAP//AAABAAEAAAAYAP//AAABAAEAAAAYAAAAAAABAAEAAAAZAAAAAAABAAEAAAAaAAAAAAACAAEAAAAaAP//AAACAAEAAAAYAAEAAAABAAEAAAAZAAEAAAABAAEAAAAaAAEAAAACAAEAAAAaAAIAAAACAAIAAAAZAAIAAAABAAIAAAAYAAIAAAABAAIAAAANAPz/AAACAAAAAAAMAPz/AAABAAAAAAALAPz/AAAAAAAAAAAKAP//AAABAAAAAAALAP//AAABAAAAAAALAAAAAAABAAEAAAAMAAAAAAABAAEAAAANAAAAAAABAAEAAAANAP//AAABAAAAAAAOAP//AAABAAAAAAAPAP//AAAEAAIAAAANAP3/AAACAAIAAAAMAP3/AAABAAIAAAALAP3/AAAAAAIAAAAJAP//AAAHAAIAAAAJAAAAAAAHAAMAAAAKAAAAAAABAAEAAAAKAAEAAAABAAEAAAALAAEAAAABAAEAAAAMAAEAAAABAAEAAAANAAEAAAABAAEAAAAOAAEAAAABAAEAAAAPAAEAAAABAAEAAAAPAAAAAAABAAEAAAAQAAAAAAAFAAMAAAALAAIAAAABAAIAAAAMAAIAAAABAAIAAAANAAIAAAABAAIAAAAOAAIAAAABAAIAAAAQAAEAAAABAAEAAAARAAEAAAABAAEAAAARAAAAAAAEAAIAAAASAAAAAAAFAAIAAAAQAP//AAAFAAIAAAAOAAAAAAABAAEAAAAaAP3/AAACAAAAAAAZAP3/AAABAAAAAAAYAP3/AAABAAAAAAAXAP3/AAAAAAAAAAAYAP7/AAABAAEAAAAZAP7/AAABAAEAAAAXAP7/AAAAAAEAAAAaAP7/AAACAAEAAAARAPj/AAABAAIAAAASAPj/AAABAAIAAAATAPj/AAABAAIAAAAUAPj/AAABAAIAAAAVAPj/AAABAAIAAAAQAPj/AAAAAAIAAAAWAPj/AAACAAIAAAAWAPf/AAACAAAAAAAVAPf/AAABAAAAAAAUAPf/AAABAAAAAAAWAPT/AAACAAIAAAAWAPP/AAABAAEAAAAXAPP/AAACAAIAAAAXAPL/AAABAAAAAAAYAPL/AAACAAMAAAATAPb/AAAGAAAAAAASAPX/AAAGAAAAAAASAPb/AAAGAAEAAAATAPf/AAAGAAEAAAAVAPT/AAAAAAIAAAAVAPP/AAAAAAEAAAARAPT/AAACAAEAAAARAPP/AAACAAEAAAARAPL/AAACAAEAAAASAPf/AAABAAEAAAARAPf/AAABAAEAAAARAPb/AAABAAEAAAARAPX/AAABAAEAAAAQAPf/AAAAAAEAAAAQAPb/AAAAAAEAAAAQAPX/AAAAAAEAAAAQAPT/AAAAAAEAAAAQAPP/AAAAAAEAAAAQAPL/AAAAAAEAAAARAPH/AAACAAAAAAAQAPH/AAABAAAAAAAPAPH/AAAAAAMAAAAVAPL/AAABAAAAAAAWAPL/AAABAAAAAAATAO//AAAAAAMAAAAUAO//AAABAAMAAAAVAO//AAAGAAAAAAAVAPD/AAAGAAEAAAAWAPD/AAABAAMAAAAXAPD/AAACAAMAAAAUAPL/AAAAAAMAAAA=")
+tile_set = SubResource("TileSet_mlklb")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=12204816]
+
+[node name="StrawberryLabel" type="Label" parent="UI" unique_id=1404353814]
+offset_right = 40.0
+offset_bottom = 23.0
+metadata/_edit_use_anchors_ = true

@@ -18,6 +18,12 @@ signal nap_finished
 ## Horizontal nudge applied during a standing (high) jump
 @export var stand_jump_x_boost: float = 50.0
 
+## Dreamflight tuning
+@export var flight_speed: float = 120.0
+@export var flight_acceleration: float = 600.0
+@export var flight_friction: float = 400.0
+@export var flight_gravity: float = 80.0
+
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 var coyote_timer: Timer
@@ -28,6 +34,8 @@ var is_gnawing: bool = false
 var is_digging: bool = false
 var is_napping: bool = false
 
+var is_dreamflight: bool = false
+
 
 func _ready() -> void:
 	sprite.animation_finished.connect(_on_animation_finished)
@@ -35,16 +43,32 @@ func _ready() -> void:
 
 
 func _on_animation_finished() -> void:
-	if sprite.animation == &"nap":
+	if sprite.animation == "nap":
 		nap_finished.emit()
 
 func _physics_process(delta: float) -> void:
+	if is_dreamflight:
+		_handle_flight(delta)
+		_update_animation()
+		move_and_slide()
+		return
 	_apply_gravity(delta)
 	_check_coyote_time()
 	_handle_jump()
 	_handle_movement(delta)
 	_update_animation()
 	move_and_slide()
+
+
+func _handle_flight(delta: float) -> void:
+	var dir := Input.get_vector("move_left", "move_right", "flight_up", "flight_down")
+	if dir.length() > 0.0:
+		velocity = velocity.move_toward(dir * flight_speed, flight_acceleration * delta)
+		sprite.flip_h = dir.x < 0
+	else:
+		velocity.x = move_toward(velocity.x, 0.0, flight_friction * delta)
+		velocity.y = move_toward(velocity.y, 0.0, flight_friction * delta)
+		velocity.y += flight_gravity * delta
 
 
 func _apply_gravity(delta: float) -> void:
@@ -101,7 +125,9 @@ func _update_animation() -> void:
 	elif is_on_floor() and is_napping and frames.has_animation("nap"):
 		sprite.play("nap")
 	elif not is_on_floor():
-		if velocity.y < 0 and frames.has_animation("high_jump"):
+		if is_dreamflight and frames.has_animation("dreamflight"):
+			sprite.play("dreamflight")
+		elif velocity.y < 0 and frames.has_animation("high_jump"):
 			sprite.play("high_jump")
 		elif velocity.y >= 0 and frames.has_animation("fall"):
 			sprite.play("fall")
